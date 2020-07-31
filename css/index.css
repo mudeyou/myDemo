@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0
+}
+html, body, .wrapper, .slider-list{
+    width: 100%;
+    height: 100%
+}
+
+/* 图片背景样式 */
+.slider-list .slider-img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
+    box-sizing: border-box;
+}
+.slider-list .slider-img:nth-of-type(1){
+    background-image: url('../img/bg-1.jpg');
+}
+.slider-list .slider-img:nth-of-type(2){
+    display: none;
+    background-image: url('../img/bg-2.jpg');
+}
+.slider-list .slider-img:nth-of-type(3){
+    display: none;
+    background-image: url('../img/bg-3.jpg');
+}
+.slider-list .slider-img:nth-of-type(4){
+    display: none;
+    background-image: url('../img/bg-4.jpg');
+}
+.slider-list .slider-img:nth-of-type(5){
+    display: none;
+    background-image: url('../img/bg-5.jpg');
+}
+.slider-list .slider-img .title{
+    float: left;
+    color: #fff;
+    width: 38%;
+    display: none;
+}
+.slider-list .slider-img:nth-of-type(1) .title{
+    display: block;
+}
+.slider-list .slider-img .title p{
+    font-size: 16px;
+}
+.slider-list .slider-img .image{
+    float: right;
+    width: 0;
+}
+.slider-list .slider-img:nth-of-type(1) .image{
+    width: 300px;
+    height: 300px;
+}
+.slider-list .slider-img .image img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 左右按键样式 */
+.wrapper .slider-btn{
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+}
+.wrapper .slider-btn .left-btn, .wrapper .slider-btn .right-btn{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.wrapper .slider-btn .left-btn{
+    float: left;
+    margin-left: 30px;
+    background-image:url('../img/left-btn.png');
+    background-size: 100%;
+}
+.wrapper .slider-btn .right-btn{
+    float: right;
+    margin-right: 30px;
+    background-image:url('../img/right-btn.png');
+    background-size: 100%;
+}
+
+/* 底下圆点样式 */
+.wrapper .slider-circle{
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    text-align: center;
+}
+.wrapper .slider-circle ul{
+    list-style: none;
+}
+.wrapper .slider-circle ul li{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #aaa;
+    margin-right: 5px;
+}
+.wrapper .slider-circle ul li:nth-of-type(5){
+    margin-right: 0px;
+}
+.wrapper .slider-circle ul li.active{
+    background-color: #fff;
+}
